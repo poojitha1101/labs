@@ -34,7 +34,7 @@ jobs:
           # Run each lab in its own directory to avoid module name clashes
           set +e  # don't stop on test failures
           cd hackathon-2026/labs || true
-          for lab in lab-01-api-fetcher lab-02-llm-json lab-03-toon-convert lab-04-vehicle-detect lab-05-rag-qa; do
+          for lab in lab-01-api-fetcher lab-02-llm-json lab-03-toon-convert lab-04-vehicle-detect lab-05-rag-qa lab-06-healthcare-agents; do
             echo "--- Testing $lab ---"
             (cd $lab && python -m pytest tests/ --tb=short \
               --json-report \
